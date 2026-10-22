@@ -1,21 +1,15 @@
-# Student Wallet Detective — Interactive Web Dashboard
+# Student Wallet Detective
 
-A responsive, student-friendly dashboard concept for exploring fictional student spending patterns. Built with plain HTML, CSS and JavaScript, with inline SVG icons and no external libraries.
+An interactive dashboard that asks one question: where does a student's month go?
 
-## Design
-- Warm off-white canvas with teal, lavender, coral and soft blue accents
-- Flat colors only (no gradients) and no emoji icons
-- Responsive layout with navigation, KPI cards, spending trend, category bars and insight cards
-- Interactive filters for city, study level and month
+Filter by city, study level and month. The KPIs, weekly trend, category ranking, weekday pattern and written findings are all recomputed from the filtered rows. It includes a median alongside the mean, a weekend-versus-calendar comparison, and a CSV export.
 
-## Run locally
-Open `index.html` in a modern browser. No installation or build step is required.
+## Data note
 
-## Publish with GitHub Pages
-1. Upload `index.html` and `README.md` to the root of a public GitHub repository.
-2. Open **Settings → Pages**.
-3. Under **Build and deployment**, choose **Deploy from a branch**, branch `main`, folder `/(root)`, then click **Save**.
-4. Wait for GitHub Pages to publish the website.
+All 640 purchases are generated in the page by a seeded random generator (seed 2026). The data is fictional and is not connected to a database. The generator's assumptions (weekend food, September shopping) are documented in the page, so the findings describe those assumptions rather than real behaviour.
 
-## Important data note
-The transactions are synthetic illustrative rows generated in the page. The dashboard is **not connected** to PostgreSQL or Power BI and its detailed filter results are not a verified export of your database. Replace the demo rows with validated project data before presenting the figures as real analysis. Do not publish personal or sensitive financial information.
+To use real data, replace the generator in `index.html` with rows shaped as `date, city, level, category, amount`.
+
+## Run or publish
+
+Open `index.html` in a browser. To publish, enable GitHub Pages (Settings, Pages, branch `main`, folder `/root`).
